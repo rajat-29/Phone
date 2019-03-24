@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+	<div class="mobile">
+
+		<!-- header section-->
+
+		<div>
+		<i style="font-size: 24px" class="fa">&#xf240;</i>
+		<i style="font-size: 24px" class="fa">&#xf1eb;</i>
+		<span id="hors"></span>
+		</div>
+
+		<!-- time displaying section-->
+
+		<div class="disptime">
+			<p id="disp"></p>
+		</div>
+
+
+		<!-- footer section-->
+
+		<div class="footer">
+			<div class="box1"><div class="triangle-left"></div></div>
+			<div class="box2"><div class="circle"></div></div>
+			<div class="box3"><div class="square"></div></div>
+		</div>
+
+</body>
+
+<script>
+
+/* header section */
+
+var d = new Date();
+var h = d.getHours();
+var m = d.getMinutes();
+var ampm = h >= 12 ? 'pm' : 'am';
+h = h % 12;
+h= h ? h : 12;
+m = m < 10 ? '0'+m : m;
+var strTime = h + ':' + m + ' ' + ampm;
+
+document.getElementById("hors").innerHTML =  strTime;
+
+/* time displaying section */
+
+document.getElementById("disp").innerHTML =  strTime;
+
+
+
+
+
+
+
+
+</script>
+</html>
