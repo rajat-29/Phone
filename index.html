@@ -1,69 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/index.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
-	<div class="mobile">
+<div class="smartphone">
+  <div class="content">
 
-		<!-- header section-->
+    <!-- header section-->
+   
+    <div>
+      <i style="font-size: 24px" class="fa">&#xf240;</i>
+      <i style="font-size: 24px" class="fa">&#xf1eb;</i>
+      <span id="hors"></span>
+    </div>
 
-		<div>
-		<i style="font-size: 24px" class="fa">&#xf240;</i>
-		<i style="font-size: 24px" class="fa">&#xf1eb;</i>
-		<span id="hors"></span>
-		</div>
+    <!-- time displaying section-->
 
-		<!-- time displaying section-->
+    <div class="disptime">
+      <p id="disp"></p>
+    </div>
 
-		<div class="disptime">
-			<p id="disp"></p>
-		</div>
+    <!--pass section-->
 
-		<!--pass section-->
+    <div class="pass">
+      <p id="incorrect"><b>Enter Password</b></p>
+    </div>
 
-		<div class="pass">
-			<p id="incorrect"><b>Enter Password</b></p>
-		</div>
+    <div class="form_input">
+      <form class="f">
+        <input type="button" value=" 1 " onclick="validation(1)">
+        <input type="button" value=" 2 " onclick="validation(2)">
+        <input type="button" value=" 3 " onclick="validation(3)">
 
-		<div class="form_input">
-			<form class="f">
-				<input type="button" value=" 1 " onclick="validation(1)">
-				<input type="button" value=" 2 " onclick="validation(2)">
-				<input type="button" value=" 3 " onclick="validation(3)">
+        <br><br>
 
-				<br><br>
+        <input type="button" value=" 4 " onclick="validation(4)">
+        <input type="button" value=" 5 " onclick="validation(5)">
+        <input type="button" value=" 6 " onclick="validation(6)">
 
-				<input type="button" value=" 4 " onclick="validation(4)">
-				<input type="button" value=" 5 " onclick="validation(5)">
-				<input type="button" value=" 6 " onclick="validation(6)">
+        <br><br>
 
-				<br><br>
+        <input type="button" value=" 7 " onclick="validation(7)">
+        <input type="button" value=" 8 " onclick="validation(8)">
+        <input type="button" value=" 9 " onclick="validation(9)">
 
-				<input type="button" value=" 7 " onclick="validation(7)">
-				<input type="button" value=" 8 " onclick="validation(8)">
-				<input type="button" value=" 9 " onclick="validation(9)">
+        <br><br>
 
-				<br><br>
+        <input type="button" value="   " style="visibility: hidden;">
+        <input type="button" value=" 0 " onclick="validation(0)">
+        <input type="button" value="   " style="visibility: hidden;">
+    </form>
+    </div>
 
-				<input type="button" value="   " style="visibility: hidden;">
-				<input type="button" value=" 0 " onclick="validation(0)">
-				<input type="button" value="   " style="visibility: hidden;">
-		</form>
-		</div>
 
-		<!-- footer section-->
-
-		<div class="footer">
-			<div class="box1"><div class="triangle-left"></div></div>
-			<div class="box2"><div class="circle"></div></div>
-			<div class="box3"><div class="square"></div></div>
-		</div>
+  </div>
+</div>
 
 </body>
 
@@ -94,29 +89,26 @@ var battery;
 
 function validation(number) {
 
-	var t = document.getElementById('incorrect');
-	t.innerHTML = "Enter Password";
-	
-	temp = temp * 10 + number;
-	size++;
-	console.log(size);
+  var t = document.getElementById('incorrect');
+  t.innerHTML = "Enter Password";
+  
+  temp = temp * 10 + number;
+  size++;
+  console.log(size);
 
-	if(size>5) {
-		t.innerHTML = "Incorrect Password";
-		alert("Please enter 12345 as password");
-		size=0;
-		temp=0;
-	}
-	if(temp == 12345) {
-		window.location.href = 'home.html';
-	}
+  if(size>5) {
+    t.innerHTML = "Incorrect Password";
+    alert("Please enter 12345 as password");
+    size=0;
+    temp=0;
+  }
+  if(temp == 12345) {
+    window.location.href = 'home.html';
+  }
 
 }
 
-
-
-
-
-
 </script>
+
+
 </html>

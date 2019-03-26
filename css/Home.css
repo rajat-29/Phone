@@ -62,23 +62,46 @@
 .disptime p{
   text-align: center;
   font-size: 40px;
+  margin-bottom: 60%;
 }
 
-/* pass section */
+/* icons */
 
-.pass p{
+.icons1 {
   text-align: center;
-  font-size: 12px;
 }
 
-.form_input{
+/* search bar */
+
+.search {
   text-align: center;
-  padding: 5px;
-  margin-left: 5%;
 }
 
-input{
-  font-size: 5vh;
-  margin-right: 5%;
-  width: 20%;
-} 
+.search_bar {
+  border-width: medium;
+  display: inline-block;
+  width: 80%;
+  height: 30px;
+  border-radius: 20px;
+  border-style: solid;
+}
+
+.search_bar p{
+  margin: 0;
+  font-size:24px; 
+    color:black; 
+    font-weight:bold; 
+    font-style:italic;
+}
+
+/* next page */
+
+.next_page {
+  border-width: medium;
+  display: inline-block;
+  width: 10%;
+  height: 10px;
+  border-radius: 20px;
+  border-style: solid;
+  background-color: gray;
+}
