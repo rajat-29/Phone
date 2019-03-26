@@ -71,32 +71,6 @@ document.getElementById("hors").innerHTML =  strTime;
 
 document.getElementById("disp").innerHTML =  strTime;
 
-/* pass section */
-
-var temp = 0;
-var size = 0;
-var battery;
-
-function validation(number) {
-
-  var t = document.getElementById('incorrect');
-  t.innerHTML = "Enter Password";
-  
-  temp = temp * 10 + number;
-  size++;
-  console.log(size);
-
-  if(size>5) {
-    t.innerHTML = "Incorrect Password";
-    alert("Please enter 12345 as password");
-    size=0;
-    temp=0;
-  }
-  if(temp == 12345) {
-    window.location.href = 'home.html';
-  }
-
-}
 
 </script>
 
