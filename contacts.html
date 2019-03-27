@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/contacts.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="smartphone">
+  <div class="content">
+
+    <!-- header section-->
+   
+    <div>
+      <i style="font-size: 24px" class="fa">&#xf240;</i>
+      <i style="font-size: 24px" class="fa">&#xf1eb;</i>
+      <span id="hors"></span>
+    </div><br>
+
+     <!-- title section-->
+
+    <div class="title">
+      <div class="back">
+      <a href="home.html"><i style="font-size:34px" class="fa">&#xf104;</i></a>
+      </div>
+      <div class="head">
+        <p>Contacts</p>
+      </div>
+    </div>
+
+    <!-- contacts section-->
+
+    <div class="chip">
+      <img src="images/img_avatar2.png" alt="Person" width="96" height="96">
+        Papa - 123456789
+    </div><br><br>
+
+     <div class="chip">
+      <img src="images/img_avatar1.png" alt="Person" width="96" height="96">
+        Mumma - 987654321
+    </div><br><br>
+
+    <div class="chip">
+      <img src="images/img_avatar2.png" alt="Person" width="96" height="96">
+        Ridhav - 123456789
+    </div><br><br>
+
+     <div class="chip">
+      <img src="images/img_avatar2.png" alt="Person" width="96" height="96">
+        Rishabh - 987654321
+    </div><br><br>
+
+     <div class="chip">
+      <img src="images/img_avatar1.png" alt="Person" width="96" height="96">
+        Pooja Di - 123456789
+    </div><br><br>
+
+
+
+  </div>
+</div>
+
+</body>
+
+<script>
+
+/* header section */
+
+var d = new Date();
+var h = d.getHours();
+var m = d.getMinutes();
+var ampm = h >= 12 ? 'pm' : 'am';
+h = h % 12;
+h= h ? h : 12;
+m = m < 10 ? '0'+m : m;
+var strTime = h + ':' + m + ' ' + ampm;
+
+document.getElementById("hors").innerHTML =  strTime;
+
+
+</script>
+
+
+</html>
