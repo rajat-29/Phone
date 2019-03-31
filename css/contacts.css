@@ -41,20 +41,28 @@
 /* The screen (or content) of the device */
 .smartphone .content {
   width: 280px;
-  height: 450px;
+  height: 405px;
   background: white;
+  overflow: auto;
+  overflow-x:hidden;
 }
 
 /* header section */
 
+.headingsw {
+  background-color: black;
+}
+
 .fa{
   margin-left: 2%;
+  color: gray;
 }
 
 #hors {
   float: right;
   margin-right: 2%;
   font-size: 22px;
+  color: gray;
 }
 
 /* title */
@@ -65,14 +73,18 @@
   background-color: #CAD6D8;
   margin-bottom: 5%;
   display: flex;
+  margin-top: 0;
+    position: static;
+
 }
 
 .back {
   height: 40px;
   width: 20%;
-
   flex: 1;
 }
+
+
 
 .head {
   height: 40px;
@@ -88,6 +100,8 @@
 
 /* contacts section */
 
+
+
 .chip {
   display: inline-block;
   padding: 0 25px;
@@ -97,6 +111,7 @@
   border-radius: 25px;
   background-color: #f1f1f1;
   width: 80%;
+
 }
 
 .chip img {
@@ -107,3 +122,31 @@
   border-radius: 50%;
 }
 
+.chip i{
+  float: right;
+  margin-top: 7%;
+  color: blue;
+}
+
+/* scroll bar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 20px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f1f1f1; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}

@@ -55,12 +55,14 @@ body {
 
 .fa{
   margin-left: 2%;
+  color: white;
 }
 
 #hors {
   float: right;
   margin-right: 2%;
   font-size: 22px;
+  color: white;
 }
 
 /* time displaying section */
@@ -68,6 +70,7 @@ body {
 .disptime p{
   text-align: center;
   font-size: 40px;
+  color: white;
 }
 
 /* pass section */

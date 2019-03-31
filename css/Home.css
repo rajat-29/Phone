@@ -42,7 +42,9 @@
 .smartphone .content {
   width: 280px;
   height: 450px;
-  background: white;
+    background-image: url('../images/wall.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* header section */
