@@ -42,7 +42,7 @@
 .smartphone .content {
   width: 280px;
   height: 450px;
-    background-image: url('../images/wall.jpg');
+  background-image: url('../images/wall.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }

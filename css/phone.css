@@ -44,7 +44,6 @@
   height: 405px;
   background: white;
   overflow: auto;
-  overflow-x:hidden;
 }
 
 /* header section */
@@ -74,8 +73,6 @@
   margin-bottom: 5%;
   display: flex;
   margin-top: 0;
-    position: static;
-
 }
 
 .back {
@@ -96,32 +93,37 @@
   font-size: 25px;
 }
 
-/* contacts section */
+/* dialpad */
 
-.chip {
-  display: inline-block;
-  padding: 0 25px;
-  height: 50px;
-  font-size: 20px;
-  line-height: 50px;
-  border-radius: 25px;
-  background-color: #f1f1f1;
-  width: 80%;
 
+.formstyle {
+    width:100%;
+    height: auto;
+    margin-left: 0;
+    background-color: white;
 }
 
-.chip img {
-  float: left;
-  margin: 0 10px 0 -25px;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
+input {
+  width: 100%;
 }
 
-.chip i{
-  float: right;
-  margin-top: 7%;
-  color: blue;
+.dial input {
+    margin-left: 2%;
+    width: 30%;
+    height: 35px;
+    border: 0;
+    background: no-repeat;
+}
+
+.dial i{
+  margin-left: 45%;
+}
+
+#answerstyle {
+    width:93%;
+    height: 85px;
+    text-align: right;
+    margin-left: 2%;
 }
 
 /* scroll bar */

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/phone.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="smartphone" id="a">
+
+
+    <!-- header section-->
+   
+    <div class="headingsw">
+      <i style="font-size: 24px" class="fa">&#xf240;</i>
+      <i style="font-size: 24px" class="fa">&#xf1eb;</i>
+      <span id="hors"></span>
+    </div><br>  
+
+    <div class="content">
+
+     <!-- title section -->
+
+    <div class="title">
+      <div class="back">
+      <a href="home.html"><i style="font-size:34px;color:blue" class="fa">&#xf104;</i></a>
+      </div>
+      <div class="head">
+        <p>Phone</p>
+      </div>
+    </div>
+
+    <!-- dialpad -->
+
+  <div class="formstyle">
+
+    <form name="forms">
+
+      <input type="text" name="answer" style="outline: none;font-size:35px;border:0;" id="answerstyle"> <br>  
+
+      <br>
+
+      <div class="dial">
+
+      <input type="button" value=" 1 " onclick="forms.answer.value += '1' " style="font-size: 20px">
+      <input type="button" value=" 2 " onclick="forms.answer.value += '2' " style="font-size: 20px">
+      <input type="button" value=" 3 " onclick="forms.answer.value += '3' " style="font-size: 20px">
+
+      <br></br>
+
+      <input type="button" value=" 4 " onclick="forms.answer.value += '4' " style="font-size: 20px">
+      <input type="button" value=" 5 " onclick="forms.answer.value += '5' " style="font-size: 20px">
+      <input type="button" value=" 6 " onclick="forms.answer.value += '6' " style="font-size: 20px">
+
+      <br></br>
+
+      <input type="button" value=" 7 " onclick="forms.answer.value += '7' " style="font-size: 20px">
+      <input type="button" value=" 8 " onclick="forms.answer.value += '8' " style="font-size: 20px">
+      <input type="button" value=" 9 " onclick="forms.answer.value += '9' " style="font-size: 20px">
+
+      <br></br>
+
+      <input type="button" value=" C " onclick="forms.answer.value = ' ' " style="font-size: 20px">
+      <input type="button" value=" 0 " onclick="forms.answer.value += '0' " style="font-size: 20px">
+      <input type="button" value=" + " onclick="forms.answer.value += '-' " style="font-size: 20px">
+
+      <br></br>
+
+      <i class="fa fa-phone" style="color: black;font-size: 32px;color: green;"></i>
+
+      </div>
+    
+    </form>
+
+  </div>
+
+
+
+
+  </div>
+</div>
+
+</body>
+
+<script>
+
+/* header section */
+
+var d = new Date();
+var h = d.getHours();
+var m = d.getMinutes();
+var ampm = h >= 12 ? 'pm' : 'am';
+h = h % 12;
+h= h ? h : 12;
+m = m < 10 ? '0'+m : m;
+var strTime = h + ':' + m + ' ' + ampm;
+
+document.getElementById("hors").innerHTML =  strTime;
+
+
+</script>
+
+
+</html>
