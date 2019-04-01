@@ -49,6 +49,10 @@
 
 /* header section */
 
+.headstart {
+  background-color: black;
+}
+
 .heading {
   margin-top: 0;
   background-color: black;
