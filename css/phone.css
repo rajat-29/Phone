@@ -2,7 +2,7 @@
 .smartphone {
   position: relative;
   width: 280px;
-  height: 450px;
+  height: 440px;
   margin: auto;
   border: 6px black solid;
   border-top-width: 40px;
@@ -28,39 +28,40 @@
 .smartphone:after {
   content: '';
   display: block;
-  width: 35px;
-  height: 35px;
   position: absolute;
-  left: 50%;
-  bottom: -65px;
-  transform: translate(-50%, -50%);
   background: #333;
-  border-radius: 50%;
 
 }
 
 /* The screen (or content) of the device */
 .smartphone .content {
   width: 280px;
-  height: 405px;
-  background: white;
-  overflow: auto;
+  height: 450px;
+  background: #a8c0ff; 
+  background: -webkit-linear-gradient(to bottom, #3f2b96, #a8c0ff);  
+  background: linear-gradient(to bottom, #3f2b96, #a8c0ff);
 }
 
 /* header section */
 
 .headstart {
   background-color: black;
+  height: 35px;
 }
 
 .heading {
-  margin-top: 0;
   background-color: black;
 }
 
 .fa{
+  margin-top: 2%;
   margin-left: 2%;
   color: gray;
+}
+
+#percent {
+    color: gray;
+    font-size: 22px;
 }
 
 #hors {
@@ -68,65 +69,105 @@
   margin-right: 2%;
   font-size: 22px;
   color: gray;
+  margin-top: 3%;
 }
 
-/* title */
+/* time displaying section */
 
-.title {
-  height: 40px;
-  width: 100%;
-  background-color: #CAD6D8;
-  margin-bottom: 5%;
-  display: flex;
-  margin-top: 0;
-}
-
-.back {
-  height: 40px;
-  width: 20%;
-  flex: 1;
-}
-
-.head {
-  height: 40px;
-  width: 20%;
-  flex: 10;
-}
-
-.head p {
-  margin-top: 2%;
+.disptime p{
   text-align: center;
-  font-size: 25px;
+  font-size: 50px;
+  margin-top: 30%;
+  margin-bottom: 40%;
 }
 
-/* dialpad */
+/* icons */
 
-.formstyle {
-    width:100%;
-    height: auto;
-    margin-left: 0;
-    background-color: white;
+.icons1 {
+  text-align: center;
 }
 
-input {
-  width: 100%;
+/* search bar */
+
+.search {
+  text-align: center;
 }
 
-.dial input {
-    margin-left: 2%;
-    width: 30%;
-    height: 35px;
-    border: 0;
-    background: no-repeat;
+.search_bar {
+  border-width: medium;
+  display: inline-block;
+  width: 90%;
+  height: 30px;
+  border-radius: 20px;
+  border-style: solid;
 }
 
-.dial i{
-  margin-left: 45%;
+.search_bar p{
+  margin: 0;
+  font-size:24px; 
+    color:black; 
+    font-weight:bold; 
+    font-style:italic;
 }
 
-#answerstyle {
-    width:93%;
-    height: 70px;
-    text-align: right;
-    margin-left: 2%;
+/* next page */
+
+.next_page {
+  border-width: medium;
+  display: inline-block;
+  width: 10%;
+  height: 10px;
+  border-radius: 20px;
+  border-style: solid;
+  background-color: gray;
+}
+
+/* footer part */
+
+.footstart {
+  background-color: black;
+  color: white;
+  height: 10px;
+display: inline-block;
+  }
+
+  .triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 15px solid white;
+  border-bottom: 12px solid transparent;
+  margin-left: 23%;
+   margin-top: 2%;
+  float: left;
+}
+
+.square {
+  height: 17px;
+  width: 17px;
+  background-color: white;
+  margin-left: 18%;
+  margin-top: 4%;
+  border-radius: 5px;
+  float: left;
+}
+
+.rectangle {
+  height: 20px;
+  width: 53px;
+  background-color: white;
+  margin-left: 17%;
+   margin-top: 4%;
+  float: left;
+  border-radius: 8px;
+}
+
+.circle {
+  height: 17px;
+  width: 17px;
+  background-color: white;
+  border-radius: 50%;
+  margin-left: 18%;
+  margin-top: 4%;
+  float: left;
 }

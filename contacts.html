@@ -16,13 +16,13 @@
   <div class="headstart">
       <div class="heading">
         <i style="font-size: 24px" class="fa">&#xf240;</i>
+        <span id="percent"></span>
         <i style="font-size: 24px" class="fa">&#xf1eb;</i>
         <span id="hors"></span>
     </div><br>    
   </div>
 
-<div class="content">
-
+  
     <div class="title">
       <div class="back">
         <a href="home.html"><i style="font-size:34px;color:blue" class="fa">&#xf104;</i></a>
@@ -31,6 +31,9 @@
         <p>Contacts</p>
       </div>
     </div>
+
+<div class="content">
+
 
     <!-- contacts section-->
 
@@ -86,6 +89,16 @@
 
 
 </div>
+
+   <!-- footer section-->
+
+      <div class="footstart" style="display: block;">
+    <div class="square"></div>
+    <div class="rectangle"></div>
+    <div class="circle"></div>
+    
+    </div><br>  
+    
 </div>
 
 </body>
@@ -104,6 +117,17 @@ m = m < 10 ? '0'+m : m;
 var strTime = h + ':' + m + ' ' + ampm;
 
 document.getElementById("hors").innerHTML =  strTime;
+
+var percent = document.getElementById('percent');
+
+    navigator.getBattery().then(function(batteryManager) {
+        var level = batteryManager.level * 100;
+        console.log(level);
+        percent.innerHTML = level + "%";
+      })
+      .catch(function (e) {
+        console.error(e);
+      });
 
 </script>
 </html>

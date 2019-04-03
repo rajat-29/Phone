@@ -4,82 +4,65 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="css/phone.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<title>Phone</title>
-<link rel="icon" href="images/logo.jpg">
 </head>
 <body>
 
-<div class="smartphone">
+<div class="smartphone">  <!-- main conatiner -->
+<div class="content"> <!-- content part -->
 
-  <!-- header section-->
+    <!-- header section-->
 
   <div class="headstart">
       <div class="heading">
-        <i style="font-size: 24px" class="fa">&#xf240;</i>
+        <i id="abc" style="font-size: 24px" class="fa">&#xf240;</i>
+        <span id="percent"></span>
         <i style="font-size: 24px" class="fa">&#xf1eb;</i>
         <span id="hors"></span>
     </div><br>    
   </div>
 
-<div class="content">
+    <!-- time displaying section-->
 
-    <div class="title">
-      <div class="back">
-        <a href="home.html"><i style="font-size:34px;color:blue" class="fa">&#xf104;</i></a>
-      </div>
-      <div class="head">
-        <p>Phone</p>
-      </div>
+    <div class="disptime">
+      <p id="disp"></p>
     </div>
 
-      <!-- dialpad -->
+    <!-- icons bar section-->
 
-  <div class="formstyle">
+    <div class="icons1">
+      <a href="phone.html"><i style="font-size: 44px;color: black" class="fa">&#xf095;</i></a>
+      <a href="contacts.html"><i style="font-size: 44px;color: black" class="fa fa-address-book-o"></i></a>
+      <i style="font-size: 44px" class="fa fa-play"></i>
+      <i style="font-size: 44px" class="fa fa-whatsapp"></i>
+      <i style="font-size: 44px" class="fa fa-chrome"></i><br><br>
+    </div>
 
-    <form name="forms">
+    <!-- search bar section-->
 
-      <input type="text" name="answer" style="outline: none;font-size:35px;border:0;" id="answerstyle"> <br> <br>
-
-      <div class="dial">
-
-      <input type="button" value=" 1 " onclick="forms.answer.value += '1' " style="font-size: 30px">
-      <input type="button" value=" 2 " onclick="forms.answer.value += '2' " style="font-size: 30px">
-      <input type="button" value=" 3 " onclick="forms.answer.value += '3' " style="font-size: 30px">
-
-      <br></br>
-
-      <input type="button" value=" 4 " onclick="forms.answer.value += '4' " style="font-size: 30px">
-      <input type="button" value=" 5 " onclick="forms.answer.value += '5' " style="font-size: 30px">
-      <input type="button" value=" 6 " onclick="forms.answer.value += '6' " style="font-size: 30px">
-
-      <br></br>
-
-      <input type="button" value=" 7 " onclick="forms.answer.value += '7' " style="font-size: 30px">
-      <input type="button" value=" 8 " onclick="forms.answer.value += '8' " style="font-size: 30px">
-      <input type="button" value=" 9 " onclick="forms.answer.value += '9' " style="font-size: 30px">
-
-      <br></br>
-
-      <input type="button" value=" C " onclick="forms.answer.value = ' ' " style="font-size: 30px">
-      <input type="button" value=" 0 " onclick="forms.answer.value += '0' " style="font-size: 30px">
-      <input type="button" value=" + " onclick="forms.answer.value += '-' " style="font-size: 30px">
-
-      <br></br>
-      
-      <a href="tel: 123456799">
-      <i class="fa fa-phone" style="color: black;font-size: 40px;color: green;"></i></a>
-
+    <div class="search">
+      <div class="search_bar">
+        <i class="fa fa-google" style="float: left; font-size: 25px; margin-top: 1%; color: red"></i>
+        <i class="fa fa-microphone" style="float: right; font-size: 25px; margin-top: 1%;margin-right: 3%;color: black;"></i>
       </div>
+    </div><br>
+
+    <!-- next page section-->
+
+    <div class="search">
+      <div class="next_page"></div>
+    </div>
     
-    </form>
-
-  </div> 
-
-
-</div>
 </div>
 
-</body>
+    <!-- footer section-->
+
+    <div class="footstart" style="display: block;">
+      <div class="square"></div>
+      <div class="rectangle"></div>
+      <div class="circle"></div>
+    </div><br>  
+
+</div>
 
 <script>
 
@@ -96,5 +79,46 @@ var strTime = h + ':' + m + ' ' + ampm;
 
 document.getElementById("hors").innerHTML =  strTime;
 
+/* time displaying section */
+
+document.getElementById("disp").innerHTML =  strTime;
+
+/* battery displaying section */
+
+navigator.getBattery().then(function(batteryManager) {
+	var percent = document.getElementById('percent');
+	var dis = document.getElementById('abc');
+
+    var level = batteryManager.level * 100;
+    console.log(level);
+    parseInt(level); 
+     console.log(level);
+    percent.innerHTML = level + "%";
+    if(level < 50) {
+    dis.innerHTML = '<i class="fa fa-battery-half"></i>';
+	}
+	if(level < 20) {
+		dis.innerHTML = '<i class="fa fa-battery-quarter"></i>';
+	}
+
+  })
+    .catch(function (e) {
+        console.error(e);
+    });
+
+/* footer hide section 
+
+function toggle_visibility() {
+    var e = document.getElementById('hid');
+    if(e.style.display == 'block')
+        e.style.display = 'none';
+    else
+        e.style.display = 'block';
+}
+*/
+
+
 </script>
+
+</body>
 </html>
