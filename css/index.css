@@ -1,3 +1,7 @@
+body {
+  background-color: #cccccc;
+}
+
 /* The device with borders */
 .smartphone {
   position: relative;
@@ -31,99 +35,59 @@
   display: block;
   position: absolute;
   background: #333;
-
 }
 
 /* The screen (or content) of the device */
 .smartphone .content {
   width: 280px;
   height: 450px;
-
-  background: #E8CBC0;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #636FA4, #E8CBC0);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #636FA4, #E8CBC0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  background: #E6DADA;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #274046, #E6DADA);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #274046, #E6DADA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 
 /* header section */
 
-.headstart {
-  background-color: black;
-  height: 35px;
-}
-
-.heading {
-  background-color: black;
-}
-
 .fa{
-  margin-top: 2%;
   margin-left: 2%;
-  color: white;
-}
-
-#percent {
-    color: white;
-    font-size: 22px;
+  color: black;
 }
 
 #hors {
   float: right;
   margin-right: 2%;
   font-size: 22px;
-  color: white;
-  margin-top: 3%;
+  color: black;
 }
 
 /* time displaying section */
 
 .disptime p{
   text-align: center;
-  font-size: 50px;
-  margin-top: 30%;
-  margin-bottom: 40%;
+  font-size: 40px;
+  color: black;
 }
 
-/* icons */
+/* pass section */
 
-.icons1 {
+.pass p{
   text-align: center;
+  font-size: 12px;
 }
 
-/* search bar */
-
-.search {
+.form_input{
   text-align: center;
+  padding: 5px;
+  margin-left: 5%;
 }
 
-.search_bar {
-  border-width: medium;
-  display: inline-block;
-  width: 90%;
-  height: 30px;
-  border-radius: 20px;
-  border-style: solid;
-}
-
-.search_bar p{
-  margin: 0;
-  font-size:24px; 
-    color:black; 
-    font-weight:bold; 
-    font-style:italic;
-}
-
-/* next page */
-
-.next_page {
-  border-width: medium;
-  display: inline-block;
-  width: 10%;
-  height: 10px;
-  border-radius: 20px;
-  border-style: solid;
-  background-color: gray;
-}
+input{
+  font-size: 5vh;
+  margin-right: 5%;
+  width: 25%;
+} 
 
 /* footer part */
 

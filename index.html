@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Index</title>
+<link rel="icon" href="images/logo.jpg">
+</head>
+<body>
+
+<div class="smartphone">
+  <div class="content">
+
+    <!-- header section-->
+   
+    <div>
+      <i style="font-size: 24px" class="fa">&#xf240;</i>
+      <i style="font-size: 24px" class="fa">&#xf1eb;</i>
+      <span id="hors"></span>
+    </div>
+
+    <!-- time displaying section-->
+
+    <div class="disptime">
+      <p id="disp"><b></b></p>
+    </div>
+
+    <!--pass section-->
+
+    <div class="pass">
+      <p id="incorrect"><b>Enter Password</b></p>
+    </div>
+
+    <div class="form_input">
+      <form class="f">
+        <input type="button" value=" 1 " onclick="validation(1)">
+        <input type="button" value=" 2 " onclick="validation(2)">
+        <input type="button" value=" 3 " onclick="validation(3)">
+
+        <br><br>
+
+        <input type="button" value=" 4 " onclick="validation(4)">
+        <input type="button" value=" 5 " onclick="validation(5)">
+        <input type="button" value=" 6 " onclick="validation(6)">
+
+        <br><br>
+
+        <input type="button" value=" 7 " onclick="validation(7)">
+        <input type="button" value=" 8 " onclick="validation(8)">
+        <input type="button" value=" 9 " onclick="validation(9)">
+
+        <br><br>
+
+        <input type="button" value="   " style="visibility: hidden;">
+        <input type="button" value=" 0 " onclick="validation(0)">
+        <input type="button" value="   " style="visibility: hidden;">
+    </form>
+    </div>
+
+
+  </div>
+      <!-- footer section-->
+
+    <div class="footstart" style="display: block;">
+      <div class="square"></div>
+      <div class="rectangle"></div>
+      <div class="circle"></div>
+    </div><br> 
+    
+</div>
+
+</body>
+
+<script>
+
+/* header section */
+
+var d = new Date();
+var h = d.getHours();
+var m = d.getMinutes();
+var ampm = h >= 12 ? 'pm' : 'am';
+h = h % 12;
+h= h ? h : 12;
+m = m < 10 ? '0'+m : m;
+var strTime = h + ':' + m + ' ' + ampm;
+
+document.getElementById("hors").innerHTML =  strTime;
+
+/* time displaying section */
+
+document.getElementById("disp").innerHTML =  strTime;
+
+/* pass section */
+
+var temp = 0;
+var size = 0;
+var battery;
+
+function validation(number) {
+
+  var t = document.getElementById('incorrect');
+  t.innerHTML = "Enter Password";
+  
+  temp = temp * 10 + number;
+  size++;
+  console.log(size);
+
+  if(size>4) {
+    t.innerHTML = "Incorrect Password";
+    alert("Please enter 1234 as password");
+    size=0;
+    temp=0;
+  }
+  if(temp == 1234) {
+    window.location.href = 'home.html';
+  }
+
+}
+
+</script>
+
+</html>

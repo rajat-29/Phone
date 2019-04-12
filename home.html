@@ -33,9 +33,9 @@
     <div class="icons1">
       <a href="phone.html"><i style="font-size: 44px;color: black" class="fa">&#xf095;</i></a>
       <a href="contacts.html"><i style="font-size: 44px;color: black" class="fa fa-address-book-o"></i></a>
-      <i style="font-size: 44px" class="fa fa-play"></i>
-      <i style="font-size: 44px" class="fa fa-whatsapp"></i>
-      <i style="font-size: 44px" class="fa fa-chrome"></i><br><br>
+      <i style="font-size: 44px;color: black" class="fa fa-play"></i>
+      <i style="font-size: 44px;color: black" class="fa fa-whatsapp"></i>
+      <i style="font-size: 44px;color: black" class="fa fa-chrome"></i><br><br>
     </div>
 
     <!-- search bar section-->
@@ -59,7 +59,7 @@
 
     <div class="footstart" style="display: block;">
       <div class="square"></div>
-      <div class="rectangle"></div>
+      <a href="home.html"><div class="rectangle"></div></a>
       <div class="circle"></div>
     </div><br>  
 
@@ -92,7 +92,7 @@ navigator.getBattery().then(function(batteryManager) {
 
     var level = batteryManager.level * 100;
     console.log(level);
-    parseInt(level); 
+    level = parseInt(level); 
      console.log(level);
     percent.innerHTML = level + "%";
     if(level < 50) {
