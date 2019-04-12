@@ -30,30 +30,46 @@
   display: block;
   position: absolute;
   background: #333;
+
 }
 
 /* The screen (or content) of the device */
 .smartphone .content {
   width: 280px;
-  height: 490px;
-
-  background: #a8c0ff;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #3f2b96, #a8c0ff);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  height: 450px;
+  background: #a8c0ff; 
+  background: -webkit-linear-gradient(to bottom, #3f2b96, #a8c0ff);  
+  background: linear-gradient(to bottom, #3f2b96, #a8c0ff);
 }
 
 /* header section */
 
+.headstart {
+  background-color: black;
+  height: 35px;
+}
+
+.heading {
+  background-color: black;
+}
+
 .fa{
+  margin-top: 2%;
   margin-left: 2%;
+  color: gray;
+}
+
+#percent {
+    color: gray;
+    font-size: 22px;
 }
 
 #hors {
   float: right;
   margin-right: 2%;
   font-size: 22px;
-  color: white;
+  color: gray;
+  margin-top: 3%;
 }
 
 /* time displaying section */
@@ -61,9 +77,8 @@ background: linear-gradient(to bottom, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, 
 .disptime p{
   text-align: center;
   font-size: 50px;
-  margin-top: 40%;
+  margin-top: 30%;
   margin-bottom: 40%;
-
 }
 
 /* icons */
@@ -107,7 +122,9 @@ background: linear-gradient(to bottom, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, 
   background-color: gray;
 }
 
-.headstart {
+/* footer part */
+
+.footstart {
   background-color: black;
   color: white;
   height: 10px;
