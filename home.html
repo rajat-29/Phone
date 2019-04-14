@@ -1,116 +1,117 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="css/home.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<title>Home</title>
-</head>
-<body>
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Home</title>
+  <link rel="icon" href="images/logo.jpg">
+  </head>
+  <body>
 
-<div class="smartphone">  <!-- main conatiner -->
-<div class="content"> <!-- content part -->
+  <div class="smartphone">  <!-- main conatiner -->
+  <div class="content"> <!-- content part -->
 
-    <!-- header section-->
+      <!-- header section-->
 
-  <div class="headstart">
-      <div class="heading">
-        <i id="abc" style="font-size: 24px" class="fa">&#xf240;</i>
-        <span id="percent"></span>
-        <i style="font-size: 24px" class="fa">&#xf1eb;</i>
-        <span id="hors"></span>
-    </div><br>    
+    <div class="headstart">
+        <div class="heading">
+          <i id="abc" style="font-size: 24px" class="fa">&#xf240;</i>
+          <span id="percent"></span>
+          <i style="font-size: 24px" class="fa">&#xf1eb;</i>
+          <span id="hors"></span>
+      </div><br>    
+    </div>
+
+      <!-- time displaying section-->
+
+      <div class="disptime">
+        <p id="disp"></p>
+      </div>
+
+      <!-- icons bar section-->
+
+      <div class="icons1">
+        <a href="phone.html"><i style="font-size: 44px;color: black" class="fa">&#xf095;</i></a>
+        <a href="contact.html"><i style="font-size: 44px;color: black" class="fa fa-address-book-o"></i></a>
+        <i style="font-size: 44px;color: black" class="fa fa-play"></i>
+        <i style="font-size: 44px;color: black" class="fa fa-whatsapp"></i>
+        <i style="font-size: 44px;color: black" class="fa fa-chrome"></i><br><br>
+      </div>
+
+      <!-- search bar section-->
+
+      <div class="search">
+        <div class="search_bar">
+          <i class="fa fa-google" style="float: left; font-size: 25px; margin-top: 1%; color: blue"></i>
+          <i class="fa fa-microphone" style="float: right; font-size: 25px; margin-top: 1%;margin-right: 3%;color: black;"></i>
+        </div>
+      </div><br>
+
+      <!-- next page section-->
+
+      <div class="search">
+        <div class="next_page"></div>
+      </div>
+      
   </div>
 
-    <!-- time displaying section-->
+      <!-- footer section-->
 
-    <div class="disptime">
-      <p id="disp"></p>
-    </div>
+      <div class="footstart" style="display: block;">
+        <div class="square"></div>
+        <a href="home.html"><div class="rectangle"></div></a>
+        <div class="circle"></div>
+      </div><br>  
 
-    <!-- icons bar section-->
+  </div>
 
-    <div class="icons1">
-      <a href="phone.html"><i style="font-size: 44px;color: black" class="fa">&#xf095;</i></a>
-      <a href="contacts.html"><i style="font-size: 44px;color: black" class="fa fa-address-book-o"></i></a>
-      <i style="font-size: 44px;color: black" class="fa fa-play"></i>
-      <i style="font-size: 44px;color: black" class="fa fa-whatsapp"></i>
-      <i style="font-size: 44px;color: black" class="fa fa-chrome"></i><br><br>
-    </div>
+  <script>
 
-    <!-- search bar section-->
+  /* header section */
 
-    <div class="search">
-      <div class="search_bar">
-        <i class="fa fa-google" style="float: left; font-size: 25px; margin-top: 1%; color: blue"></i>
-        <i class="fa fa-microphone" style="float: right; font-size: 25px; margin-top: 1%;margin-right: 3%;color: black;"></i>
-      </div>
-    </div><br>
+  var d = new Date();
+  var h = d.getHours();
+  var m = d.getMinutes();
+  var ampm = h >= 12 ? 'pm' : 'am';
+  h = h % 12;
+  h= h ? h : 12;
+  m = m < 10 ? '0'+m : m;
+  var strTime = h + ':' + m + ' ' + ampm;
 
-    <!-- next page section-->
+  document.getElementById("hors").innerHTML =  strTime;
 
-    <div class="search">
-      <div class="next_page"></div>
-    </div>
-    
-</div>
+  /* time displaying section */
 
-    <!-- footer section-->
+  document.getElementById("disp").innerHTML =  strTime;
 
-    <div class="footstart" style="display: block;">
-      <div class="square"></div>
-      <a href="home.html"><div class="rectangle"></div></a>
-      <div class="circle"></div>
-    </div><br>  
+  /* battery displaying section */
 
-</div>
+  navigator.getBattery().then(function(batteryManager) {
+  	var percent = document.getElementById('percent');
+  	var dis = document.getElementById('abc');
 
-<script>
+      var level = batteryManager.level * 100;
+      console.log(level);
+      level = parseInt(level); 
+       console.log(level);
+      percent.innerHTML = level + "%";
+      if(level < 50) {
+      dis.innerHTML = '<i class="fa fa-battery-half"></i>';
+  	}
+  	if(level < 20) {
+  		dis.innerHTML = '<i class="fa fa-battery-quarter"></i>';
+  	}
+    if(level < 10) {
+      dis.innerHTML = '<i class="fa fa-battery-empty"></i>';
+    }
 
-/* header section */
+    })
+      .catch(function (e) {
+          console.error(e);
+      });
 
-var d = new Date();
-var h = d.getHours();
-var m = d.getMinutes();
-var ampm = h >= 12 ? 'pm' : 'am';
-h = h % 12;
-h= h ? h : 12;
-m = m < 10 ? '0'+m : m;
-var strTime = h + ':' + m + ' ' + ampm;
+  </script>
 
-document.getElementById("hors").innerHTML =  strTime;
-
-/* time displaying section */
-
-document.getElementById("disp").innerHTML =  strTime;
-
-/* battery displaying section */
-
-navigator.getBattery().then(function(batteryManager) {
-	var percent = document.getElementById('percent');
-	var dis = document.getElementById('abc');
-
-    var level = batteryManager.level * 100;
-    console.log(level);
-    level = parseInt(level); 
-     console.log(level);
-    percent.innerHTML = level + "%";
-    if(level < 50) {
-    dis.innerHTML = '<i class="fa fa-battery-half"></i>';
-	}
-	if(level < 20) {
-		dis.innerHTML = '<i class="fa fa-battery-quarter"></i>';
-	}
-  if(level < 10) {
-    dis.innerHTML = '<i class="fa fa-battery-empty"></i>';
-  }
-
-  })
-    .catch(function (e) {
-        console.error(e);
-    });
-
-</script>
-
-</body>
-</html>
+  </body>
+  </html>

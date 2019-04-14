@@ -2,7 +2,7 @@
     background-color: #cccccc;
   }
 
-  /* The device with borders */
+    /* The device with borders */
   .smartphone {
     position: relative;
     width: 280px;
@@ -35,59 +35,113 @@
     display: block;
     position: absolute;
     background: #333;
+
   }
 
   /* The screen (or content) of the device */
   .smartphone .content {
     width: 280px;
     height: 450px;
-    
-    background: #E6DADA;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #274046, #E6DADA);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #274046, #E6DADA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: white;
+      overflow: auto;
+  overflow-x:hidden;
+  overflow-y: scroll;
   }
+
+ .smartphone .content::-webkit-scrollbar {
+  display: none;
+ }
 
   /* header section */
 
+  .headstart {
+    background-color: black;
+    height: 35px;
+    position: fixed;
+    width: 280px;
+    margin-bottom: 5%;
+  }
+
+  .heading {
+    background-color: black;
+  }
+
   .fa{
+    margin-top: 2%;
     margin-left: 2%;
-    color: black;
+    color: white;
+  }
+
+  #percent {
+      color: white;
+      font-size: 22px;
   }
 
   #hors {
     float: right;
     margin-right: 2%;
     font-size: 22px;
-    color: black;
+    color: white;
+    margin-top: 3%;
   }
 
-  /* time displaying section */
+/* contact title */
 
-  .disptime p{
-    text-align: center;
-    font-size: 40px;
-    color: black;
-  }
+.title {
+  height: 40px;
+  width: auto;
+  background-color: #CAD6D8;
+  margin-bottom: 5%;
+  display: flex;
+  position: static;
+  margin-top: 12%;
 
-  /* pass section */
+}
 
-  .pass p{
-    text-align: center;
-    font-size: 12px;
-  }
+.back {
+  height: 40px;
+  width: 20%;
+  flex: 1;
+}
 
-  .form_input{
-    text-align: center;
-    padding: 5px;
-    margin-left: 5%;
-  }
+.head {
+  height: 40px;
+  width: 20%;
+  flex: 10;
+}
 
-  input{
-    font-size: 5vh;
-    margin-right: 5%;
-    width: 25%;
-  } 
+.head p {
+  margin-top: 2%;
+  text-align: center;
+  font-size: 25px;
+}
+/* contacts section */
+
+.chip {
+  display: inline-block;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 20px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+  width: 80%;
+
+}
+
+.chip img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.chip i{
+  float: right;
+  margin-top: 7%;
+  color: blue;
+}
 
   /* footer part */
 
