@@ -1,0 +1,211 @@
+  body {
+    background-color: #cccccc;
+  }
+  /* The device with borders */
+  .smartphone {
+    position: relative;
+    width: 280px;
+    height: 440px;
+    margin: auto;
+    margin-top: 2%;
+    border: 6px black solid;
+    border-top-width: 40px;
+    border-bottom-width: 60px;
+    border-radius: 36px;
+  }
+
+  /* The horizontal line on the top of the device */
+  .smartphone:before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 5px;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333;
+    border-radius: 10px;
+  }
+
+  /* The circle on the bottom of the device */
+  .smartphone:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: #333;
+
+  }
+
+  /* The screen (or content) of the device */
+  .smartphone .content {
+    width: 280px;
+    height: 450px;
+    background: white;
+  }
+
+  /* header section */
+
+  .headstart {
+    background-color: black;
+    height: 35px;
+  }
+
+  .heading {
+    background-color: black;
+  }
+
+  .fa{
+    margin-top: 2%;
+    margin-left: 2%;
+    color: white;
+  }
+
+  #percent {
+      color: white;
+      font-size: 22px;
+  }
+
+  #hors {
+    float: right;
+    margin-right: 2%;
+    font-size: 22px;
+    color: white;
+    margin-top: 3%;
+  }
+
+ /* music player section */
+
+
+#container {
+  width: 100%;
+  margin-bottom: 2%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.2);
+  border-radius: 24px;
+  background: #ecedef;
+}
+
+
+
+#container-top img {
+  width: 100%;
+  height: 250px;
+}
+
+#container-bottom {
+  width: 220px;
+  padding: 10px 20px 20px 20px;
+}
+
+#btns {
+  margin-top: 1%;
+  margin-left: 25%;
+  float: left;
+}
+
+#play, #backward, #forward {
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  font-size: 26px;
+  line-height: 26px;
+  color: #333;
+  background: #ecedef;
+}
+
+#timeNow {
+  margin-top: 0%;
+  margin-left: 25%;
+  margin-bottom: 10%;
+  width: 160px;
+  float: left;
+    font-size: 16px;
+  line-height: 16px;
+  padding-top: 14px;
+}
+
+#durationBar {
+  width: 220px;
+  height: 10px;
+  background: #333;
+  display: flex;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3), 0 3px 10px 0 rgba(0,0,0,0.3);
+}
+
+#expandingBar {
+  height: 10px;
+  background-color: #ecedef;
+}
+
+#movingBar {
+  width: 10px;
+  height: 10px;
+  background-color: #ecedef;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  color: #666;
+  font-weight: 300;
+}
+  
+
+  /* footer part */
+
+  .footstart {
+    background-color: black;
+    color: white;
+    height: 10px;
+  display: inline-block;
+    }
+
+    .triangle-left {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 15px solid white;
+    border-bottom: 12px solid transparent;
+    margin-left: 23%;
+     margin-top: 2%;
+    float: left;
+  }
+
+  .square {
+    height: 17px;
+    width: 17px;
+    background-color: white;
+    margin-left: 18%;
+    margin-top: 4%;
+    border-radius: 5px;
+    float: left;
+  }
+
+  .rectangle {
+    height: 20px;
+    width: 53px;
+    background-color: white;
+    margin-left: 17%;
+     margin-top: 4%;
+    float: left;
+    border-radius: 8px;
+  }
+
+  .circle {
+    height: 17px;
+    width: 17px;
+    background-color: white;
+    border-radius: 50%;
+    margin-left: 18%;
+    margin-top: 4%;
+    float: left;
+  }
