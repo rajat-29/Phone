@@ -104,27 +104,38 @@
   text-align: center;
   font-size: 25px;
 }
+/* dialpad */
 
-  /* phone section */
+.formstyle {
+    width:100%;
+    height: 375px;
+    margin-left: 0;
+    background-color: white;
+}
 
-  #clear {
-    width:18px;
+input {
+  width: 100%;
+}
+
+.dial input {
+    margin-left: 2%;
+    width: 30%;
     height: 35px;
-  }
+    border: 0;
+    background: no-repeat;
+}
 
-  input {
-    width: 32%;
-    height: 52px;
-    font-size: 27px;
+.dial i{
+  margin-left: 45%;
+}
 
-  }
-
-  #answerstyle {
-    width:98%;
-    height: 105px;
+#answerstyle {
+    width:93%;
+    height: 70px;
     text-align: right;
-    font-size: 45px;
-  }
+    margin-left: 2%;
+}
+
 
   /* footer part */
 
