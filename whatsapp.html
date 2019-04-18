@@ -1,0 +1,107 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/whatsapp.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Whatsapp</title>
+  <link rel="icon" href="images/logo.jpg">
+  </head>
+  <body>
+
+  <div class="smartphone">  <!-- main conatiner -->
+  <div class="content"> <!-- content part -->
+
+      <!-- header section-->
+
+    <div class="headstart">
+        <div class="heading">
+          <i id="abc" style="font-size: 24px" class="fa">&#xf240;</i>
+          <span id="percent"></span>
+          <i style="font-size: 24px" class="fa">&#xf1eb;</i>
+          <span id="hors"></span>
+      </div><br>    
+    </div>
+
+        <!-- contact title section-->
+     
+
+        <div class="title">
+          <div class="back">
+            <a href="home.html"><i style="font-size:34px;color:white" class="fa">&#xf104;</i></a>
+          </div>
+          <div class="head">
+            <img src="images/img_avatar2.png" alt="Person" width="152px" height="152px">
+          </div>
+          <div class="head1">
+            <p style="color: white;">You</p>
+          </div>
+        </div>
+
+           <!-- chat section-->
+
+        <div class="wall">
+          <input type="textbox" name="" placeholder="Type a Message" value="">
+          <a href="whatsapp:123"><i class="fa fa-telegram" aria-hidden="true" style="color: green;font-size: 30px;margin-left: 20px;"></i></a>
+        </div>
+
+
+
+
+  </div>
+
+      <!-- footer section-->
+
+      <div class="footstart" style="display: block;">
+        <div class="square"></div>
+        <a href="home.html"><div class="rectangle"></div></a>
+       <a href="home.html"><div class="circle"></div></a>
+      </div><br>  
+
+  </div>
+
+  <script>
+
+  /* header section */
+
+  var d = new Date();
+  var h = d.getHours();
+  var m = d.getMinutes();
+  var ampm = h >= 12 ? 'pm' : 'am';
+  h = h % 12;
+  h= h ? h : 12;
+  m = m < 10 ? '0'+m : m;
+  var strTime = h + ':' + m + ' ' + ampm;
+
+  document.getElementById("hors").innerHTML =  strTime;
+
+  /* battery displaying section */
+
+  navigator.getBattery().then(function(batteryManager) {
+    var percent = document.getElementById('percent');
+    var dis = document.getElementById('abc');
+
+      var level = batteryManager.level * 100;
+      console.log(level);
+      level = parseInt(level); 
+       console.log(level);
+      percent.innerHTML = level + "%";
+      if(level < 50) {
+      dis.innerHTML = '<i class="fa fa-battery-half"></i>';
+    }
+    if(level < 20) {
+      dis.innerHTML = '<i class="fa fa-battery-quarter"></i>';
+    }
+    if(level < 10) {
+      dis.innerHTML = '<i class="fa fa-battery-empty"></i>';
+    }
+
+    })
+      .catch(function (e) {
+          console.error(e);
+      });
+
+  </script>
+
+  </body>
+  </html>
