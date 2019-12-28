@@ -1,7 +1,7 @@
 # Phone
 A Phone made with html css and Javascript
 
-##Images
+## Images
 
 <img src="https://user-images.githubusercontent.com/38129975/58396817-d979b980-806b-11e9-920e-ed37fff5ce87.JPG" width="280px" height="500px"><img src="https://user-images.githubusercontent.com/38129975/58396841-f9a97880-806b-11e9-89ed-35deb9cb985d.JPG" width="280px" height="500px" align="right">
 
